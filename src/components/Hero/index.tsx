@@ -12,7 +12,7 @@ export default function Hero() {
         <Button text="Explorar cursos" type="primary" />
       </div>
       <div className="hidden md:block">
-        <Image alt="delab" className="w-[800px]" src={hero} />
+        <Image alt="delab" className="w-[600px]" src={hero} />
       </div>
     </section>
   );

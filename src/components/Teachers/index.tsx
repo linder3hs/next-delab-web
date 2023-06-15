@@ -8,7 +8,7 @@ interface Props {
 
 export default function Teachers({ cardItems }: Props) {
   return (
-    <Section className="grid grid-cols-4 gap-20 items-center justify-center w-full ">
+    <Section className="grid grid-cols-3 gap-20 items-center justify-center">
       {cardItems.map((cardItem: CardItem) => (
         <Teacher key={cardItem.title} {...cardItem} />
       ))}
