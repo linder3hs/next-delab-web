@@ -17,10 +17,7 @@ export default function Main({ children }: Props) {
 
   const [width, setWidth] = useState<number>(0);
 
-  const handleResize = () => {
-    console.log(window.innerWidth);
-    setWidth(window.innerWidth);
-  };
+  const handleResize = () => setWidth(window.innerWidth);
 
   useEffect(() => {
     handleResize();

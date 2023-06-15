@@ -34,3 +34,7 @@
 body {
   font-family: "Comfortaa", sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}

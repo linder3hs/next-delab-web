@@ -1,19 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
+import type { CardItem } from "@/types/core";
 
-interface Props {
-  image: string;
-  title: string;
-  description: string;
-  price?: string;
-}
+interface Props extends CardItem {}
 
 export default function Card({ image, title, price, description }: Props) {
   return (
-    <div className="rounded-xl border border-gray-200 shadow-lg flex flex-col">
+    <div
+      className="rounded-xl border border-gray-200 shadow-lg flex flex-col"
+    >
       <div className="flex justify-center h-44 bg-gray-100 rounded-t-xl">
         <Image
           src={image}
-          alt="React JS"
+          alt={title}
           width={100}
           height={100}
           className="object-contain"
@@ -24,14 +23,19 @@ export default function Card({ image, title, price, description }: Props) {
         <p className="text-gray-700 hover:transition-all ease-in-out delay-150 duration-300 hover:line-clamp-none line-clamp-4">
           {description}
         </p>
-        <div className="flex justify-between items-center mt-10">
-          {price && (
+        {price && (
+          <div className="flex justify-between items-center mt-10">
             <p className="text-primary text-lg font-bold">S/ {price}</p>
-          )}
-          <button className="bg-primary text-white py-2 px-4 rounded-md">
-            Inscribete ya!
-          </button>
-        </div>
+            <Link
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=51967617166&text=Hola%20quiero%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20Delab%20%F0%9F%98%80"
+            >
+              <button className="bg-primary text-white py-2 px-4 text-sm rounded-md">
+                Inscribete ya!
+              </button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
