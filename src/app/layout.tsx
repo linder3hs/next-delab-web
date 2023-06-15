@@ -1,4 +1,5 @@
 import { Main } from "@/layouts";
+import Head from "next/head";
 import "./globals.css";
 
 export default function RootLayout({
@@ -8,7 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <title>Delab - cursos online</title>
         <meta charSet="utf-8" />
         <meta
@@ -29,7 +30,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdelab_logo.87061e89.png&w=256&q=75"
+          content="https://xucekozvkttuxbzxptrz.supabase.co/storage/v1/object/sign/logos/delab_logo.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJsb2dvcy9kZWxhYl9sb2dvLnBuZyIsImlhdCI6MTY4Njg2MjcyOCwiZXhwIjoxNzE4Mzk4NzI4fQ.l8-ecj8tXkQF6h0kwY5BqP4NN-EikF8rN2fMCDdUcho&t=2023-06-15T20%3A58%3A48.776Z"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -42,7 +43,7 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdelab_logo.87061e89.png&w=256&q=75"
+          content="https://xucekozvkttuxbzxptrz.supabase.co/storage/v1/object/sign/logos/delab_logo.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJsb2dvcy9kZWxhYl9sb2dvLnBuZyIsImlhdCI6MTY4Njg2MjcyOCwiZXhwIjoxNzE4Mzk4NzI4fQ.l8-ecj8tXkQF6h0kwY5BqP4NN-EikF8rN2fMCDdUcho&t=2023-06-15T20%3A58%3A48.776Z"
         />
         <meta property="og:url" content="URL de la página actual" />
         <meta property="og:type" content="website" />
@@ -52,7 +53,7 @@ export default function RootLayout({
         <meta name="google" content="notranslate" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+      </Head>
       <body>
         <main className="m-6">
           <Main>{children}</Main>
