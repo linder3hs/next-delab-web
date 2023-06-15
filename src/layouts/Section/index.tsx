@@ -4,5 +4,5 @@ interface Props {
 }
 
 export default function Section({ children, className }: Props) {
-  return <section className={`my-20 mx-32 ${className}`}>{children}</section>;
+  return <section className={`my-10 lg:my-20 lg:mx-32 ${className}`}>{children}</section>;
 }

@@ -32,7 +32,7 @@ export default function Carrosel() {
   }, []);
 
   return (
-    <section className="flex justify-around mb-20 swiper-container">
+    <section className="flex justify-center md:justify-around mb-20 swiper-container">
       <Swiper
         modules={[Navigation]}
         slidesPerView={4}
@@ -40,18 +40,34 @@ export default function Carrosel() {
         navigation
         loop
         autoplay
+        breakpoints={{
+          390: {
+            width: 390,
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            width: 768,
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1440: {
+            width: 1440,  
+            slidesPerView: 4,
+            spaceBetween: 60,
+          },
+        }}
       >
         {logos.length > 0 &&
           logos.map((logo) => (
             <SwiperSlide key={logo.id}>
-              <div className="h-40 flex flex-col items-center justify-center">
+              <div className="h-40 flex items-center justify-center">
                 <Image
                   alt={logo.alt}
                   src={logo.src}
                   className="aspect-[3/2] object-contain"
                   width={180}
                   height={80}
-          
                 />
               </div>
             </SwiperSlide>

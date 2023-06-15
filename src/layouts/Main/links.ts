@@ -4,19 +4,19 @@ export const links = [
     href: "#",
   },
   {
-    text: "About",
+    text: "Nosotros",
     href: "#",
   },
   {
-    text: "Courses",
+    text: "Cursos",
     href: "#",
   },
   {
-    text: "Tutors",
+    text: "Profesores",
     href: "#",
   },
   {
-    text: "Contact",
+    text: "Más info",
     href: "#",
   },
 ];

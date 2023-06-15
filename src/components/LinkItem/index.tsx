@@ -8,7 +8,7 @@ interface Props {
 export default function LinkItem({ text, href }: Props) {
   return (
     <li>
-      <Link href={href} className="hover:text-red-500">
+      <Link href={href} className="hover:text-primary">
         {text}
       </Link>
     </li>

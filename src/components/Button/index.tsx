@@ -6,11 +6,11 @@ interface Props {
 export default function Button({ text, type = "primary" }: Props) {
   const types: any = {
     dark: "bg-black",
-    primary: "bg-red-500",
+    primary: "bg-primary",
   };
 
   return (
-    <button className={`${types[type]} text-white px-4 py-2 rounded-md`}>
+    <button className={`${types[type]} text-white py-4 px-6 rounded-full`}>
       {text}
     </button>
   );

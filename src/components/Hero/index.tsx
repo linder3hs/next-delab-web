@@ -4,20 +4,15 @@ import hero from "@/../public/assets/hero.png";
 
 export default function Hero() {
   return (
-    <section className="flex items-center justify-around h-screen px-40">
-      <div className="w-3/6 m-auto">
-        <h1 className="text-5xl font-bold w-4/5">
-          Explore what professionals like you are learning the most
+    <section className="flex items-center justify-around h-[30rem] lg:h-screen lg:px-40">
+      <div className="w-full lg:w-3/6 md:m-auto">
+        <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black md:w-4/5 mb-10">
+          Amplía tus conocimientos con los cursos en línea de Onlearning
         </h1>
-        <p className="my-6 text-xl w-4/6 text-gray-400">
-          Want someone to instruct you? No worries, here we introduce our
-          CourseMania’s online Tutors to assist & guide you in your professional
-          Path
-        </p>
-        <Button text="Visit Courses" type="dark" />
+        <Button text="Explorar cursos" type="primary" />
       </div>
-      <div>
-        <Image alt="Hero delab" src={hero} />
+      <div className="hidden md:block">
+        <Image alt="delab" src={hero} />
       </div>
     </section>
   );
