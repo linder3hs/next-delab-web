@@ -1,11 +1,14 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Navigation } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { getDataFromTable } from "@/services/supabase/crud";
 
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 export default function Carrosel() {
   interface ITechs {
@@ -32,14 +35,16 @@ export default function Carrosel() {
   }, []);
 
   return (
-    <section className="flex justify-center md:justify-around mb-20 swiper-container">
+    <section
+      id="carrousel"
+      className="flex justify-center md:justify-around mb-20 swiper-container"
+    >
       <Swiper
-        modules={[Navigation]}
-        slidesPerView={4}
-        spaceBetween={60}
-        navigation
-        loop
-        autoplay
+        className="mySwiper"
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        slidesPerView={1}
+        spaceBetween={0}
+        pagination={{ clickable: true }}
         breakpoints={{
           390: {
             width: 390,
@@ -52,7 +57,7 @@ export default function Carrosel() {
             spaceBetween: 40,
           },
           1440: {
-            width: 1440,  
+            width: 1440,
             slidesPerView: 4,
             spaceBetween: 60,
           },
