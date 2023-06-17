@@ -6,13 +6,16 @@ export default function Hero() {
   return (
     <section className="flex items-center justify-around h-[30rem] lg:h-screen lg:px-40">
       <div className="w-full lg:w-3/6 md:m-auto">
-        <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black md:w-4/5 mb-10">
+        <h1
+          aria-label="Amplía tus conocimientos con los cursos en línea de Delab"
+          className="text-2xl md:text-3xl lg:text-5xl font-bold text-black md:w-4/5 mb-10"
+        >
           Amplía tus conocimientos con los cursos en línea de Delab
         </h1>
         <Button text="Explorar cursos" type="primary" />
       </div>
       <div className="hidden md:block">
-        <Image alt="delab" className="w-[600px]" src={hero} />
+        <Image alt="delab" title="delab" className="w-[600px]" src={hero} />
       </div>
     </section>
   );

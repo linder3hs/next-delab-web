@@ -33,11 +33,13 @@ export default function Main({ children }: Props) {
               src={logo}
               height={41}
               alt="Delab"
+              title="Delab"
             />
             <Image
               className="visible md:invisible object-contain cursor-pointer"
               src={toggle ? menu : close}
-              alt=""
+              alt="menu"
+              title="menu"
               width={24}
               height={24}
               onClick={() => setToggle(!toggle)}

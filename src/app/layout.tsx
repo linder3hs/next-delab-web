@@ -47,8 +47,8 @@ export default function RootLayout({
         <meta property="og:url" content="URL de la página actual" />
         <meta property="og:type" content="website" />
         <meta name="author" content="Delab Cursos Online" />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index" />
+        <meta name="googlebot" content="index" />
         <meta name="google" content="notranslate" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

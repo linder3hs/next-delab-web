@@ -1,13 +1,7 @@
 import { Section } from "@/layouts";
 
 export default function About() {
-  return (
-    <Section>
-      <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl">
-        Sobre nosotros
-      </h1>
-      <p className="mt-10 text-justify">
-        ¡Bienvenidos a Delab, tu puerta de entrada al mundo de la programación!
+  const text = `¡Bienvenidos a Delab, tu puerta de entrada al mundo de la programación!
         Somos una empresa líder en el ámbito de la educación en línea,
         especializada en brindar cursos para aprender a programar. Nuestro
         objetivo es proporcionar a nuestros estudiantes las habilidades y
@@ -46,8 +40,17 @@ export default function About() {
         hacia el dominio de la programación. No importa cuál sea tu nivel de
         experiencia, estamos aquí para ayudarte a convertirte en un programador
         competente y exitoso. ¡Descubre el poder de la programación con Delab y
-        desbloquea un mundo de oportunidades!
-      </p>
+        desbloquea un mundo de oportunidades!`;
+
+  return (
+    <Section>
+      <h1
+        aria-label="Sobre nosotros"
+        className="font-bold text-3xl md:text-4xl lg:text-5xl"
+      >
+        Sobre nosotros
+      </h1>
+      <p className="mt-10 text-justify" aria-label={text}>{text}</p>
     </Section>
   );
 }

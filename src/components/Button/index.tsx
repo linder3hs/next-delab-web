@@ -10,7 +10,7 @@ export default function Button({ text, type = "primary" }: Props) {
   };
 
   return (
-    <button className={`${types[type]} text-white py-4 px-6 rounded-full`}>
+    <button aria-label={text} className={`${types[type]} text-white py-4 px-6 rounded-full`}>
       {text}
     </button>
   );

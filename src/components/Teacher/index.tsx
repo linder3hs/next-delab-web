@@ -9,12 +9,15 @@ export default function Teacher({ title, description, image }: Props) {
       <Image
         src={image}
         alt={title}
+        title={title}
         width={200}
         height={200}
         className="rounded-full h-48 object-cover"
       />
-      <h1 className="my-3 font-bold text-xl">{title}</h1>
-      <p>{description}</p>
+      <h2 aria-label={title} className="my-3 font-bold text-xl">
+        {title}
+      </h2>
+      <p aria-label={description}>{description}</p>
     </div>
   );
 }

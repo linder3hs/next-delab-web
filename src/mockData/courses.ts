@@ -13,27 +13,27 @@ export const courses = [
     image: coursesImages.react,
     description:
       "React es una biblioteca de JavaScript de código abierto utilizada para construir interfaces de usuario interactivas y reactivas.",
-    price: 350,
+    price: undefined,
   },
   {
-    title: "Android - Kotlin",
+    title: "Android Kotlin",
     image: coursesImages.kotlin,
     description:
       "Kotlin, fue desarrollado por JetBrains para mejorar la productividad de los desarrolladores y proporcionar una alternativa más segura a Java.",
-    price: 350,
+    price: undefined,
   },
   {
     title: "UI/UX",
     image: coursesImages.ui,
     description:
       "UX/UI se refiere a la experiencia del usuario y al diseño de la interfaz, respectivamente, centrándose en crear productos digitales intuitivos, atractivos y funcionales.",
-    price: 350,
+    price: undefined,
   },
   {
     title: "Next JS",
     image: coursesImages.next,
     description:
       "Next.js es un framework de React para construir aplicaciones web rápidas y escalables. Proporciona características como renderizado del lado del servidor, enrutamiento dinámico y pre-renderizado estático",
-    price: 350,
+    price: undefined,
   },
 ];

@@ -1,22 +1,21 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { getDataFromTable } from "@/services/supabase/crud";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-export default function Carrosel() {
-  interface ITechs {
-    id: number;
-    src: string;
-    alt: string;
-  }
+interface ITechs {
+  id: number;
+  src: string;
+  alt: string;
+}
 
+export default function Carrosel() {
   const [logos, setLogos] = useState<ITechs[]>([]);
 
   const getLogos = async () => {
@@ -30,9 +29,11 @@ export default function Carrosel() {
     setLogos(data);
   };
 
+  const memorizeLogos = useCallback(getLogos, []);
+
   useEffect(() => {
-    getLogos();
-  }, []);
+    memorizeLogos();
+  }, [memorizeLogos]);
 
   return (
     <section
@@ -43,7 +44,6 @@ export default function Carrosel() {
         className="mySwiper"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         slidesPerView={1}
-        spaceBetween={0}
         pagination={{ clickable: true }}
         breakpoints={{
           390: {
@@ -63,7 +63,7 @@ export default function Carrosel() {
           },
         }}
       >
-        {logos.length > 0 &&
+        {logos?.length > 0 &&
           logos.map((logo) => (
             <SwiperSlide key={logo.id}>
               <div className="h-40 flex items-center justify-center">
