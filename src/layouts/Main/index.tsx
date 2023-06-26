@@ -26,7 +26,7 @@ export default function Main({ children }: Props) {
   return (
     <>
       <header>
-        <nav className="flex flex-col md:flex-row justify-around items-center">
+        <nav className="flex flex-col md:flex-row justify-between lg:mx-32 items-center">
           <div className="flex justify-between w-full md:w-auto">
             <Image
               className="w-[100px] lg:w-[180px]"

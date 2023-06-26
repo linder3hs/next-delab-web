@@ -1,4 +1,4 @@
-const coursesImages = {
+export const coursesImages: any = {
   react:
     "https://xucekozvkttuxbzxptrz.supabase.co/storage/v1/object/sign/logos/React.svg.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJsb2dvcy9SZWFjdC5zdmcucG5nIiwiaWF0IjoxNjg2Nzg0MTUzLCJleHAiOjE3MTgzMjAxNTN9.17JxZchEqkRIqjXgyDJZnRy4NMWvpOmkFyfu-mb6R6Y&t=2023-06-14T23%3A09%3A13.832Z",
   kotlin:
@@ -19,21 +19,21 @@ export const courses = [
     title: "Android Kotlin",
     image: coursesImages.kotlin,
     description:
-      "Kotlin, fue desarrollado por JetBrains para mejorar la productividad de los desarrolladores y proporcionar una alternativa más segura a Java.",
+      "Kotlin, fue desarrollado por JetBrains para mejorar la productividad de los developers y una alternativa a Java.",
     price: undefined,
   },
   {
     title: "UI/UX",
     image: coursesImages.ui,
     description:
-      "UX/UI se refiere a la experiencia del usuario y al diseño de la interfaz, respectivamente, centrándose en crear productos digitales intuitivos, atractivos y funcionales.",
+      "UX/UI es la experiencia del usuario y al diseño de la interfaz, respectivamente, centrándose en crear productos digitales.",
     price: undefined,
   },
   {
     title: "Next JS",
     image: coursesImages.next,
     description:
-      "Next.js es un framework de React para construir aplicaciones web rápidas y escalables. Proporciona características como renderizado del lado del servidor, enrutamiento dinámico y pre-renderizado estático",
+      "Next.js es un framework de React para construir aplicaciones web rápidas y escalables.",
     price: undefined,
   },
 ];

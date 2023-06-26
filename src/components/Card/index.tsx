@@ -38,7 +38,7 @@ export default function Card({ image, title, price, description }: Props) {
           </div>
         ): (
           <div>
-            <Link href={`/info/${title.toLowerCase().replaceAll(" ", "-")}`}>
+            <Link href={`/info/${title.toLowerCase().replaceAll(" ", "-").replaceAll("/", "-")}`}>
               <button aria-label="Ver más" className="bg-primary text-white py-2 px-4 text-sm rounded-md">
                 Ver más
               </button>
